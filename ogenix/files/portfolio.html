@@ -49,6 +49,39 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/ogenix.css" />
     <link rel="stylesheet" href="assets/css/ogenix-responsive.css" />
+    <style>
+        /* Stilovi za galerijski item */
+        .gallery-one__img-box {
+          position: relative;
+          overflow: hidden;
+          width: 300px; /* za primer – prilagodite po potrebi */
+          margin: 20px auto;
+        }
+        .gallery-one__img-box img {
+          width: 100%;
+          display: block;
+          cursor: pointer;
+        }
+        /* Stilovi za overlay koji će prikazati uvećanu sliku */
+        #zoomOverlay {
+          display: none; 
+          position: fixed; 
+          top: 0; 
+          left: 0; 
+          width: 100%; 
+          height: 100%;
+          background: rgba(0,0,0,0.8);
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #zoomOverlay img {
+          max-width: 90%; 
+          max-height: 90%;
+          cursor: pointer;
+        }
+      </style>
 </head>
 
 <body class="custom-cursor">
@@ -67,250 +100,92 @@
 
 
     <div class="page-wrapper">
-        <header class="main-header">
-            <div class="main-header__wrapper">
-                <div class="main-header__wrapper-inner">
-                    <div class="main-header__logo">
-                        <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
-                    </div>
-                    <div class="main-header__right">
-                        <div class="main-header__top">
-                            <div class="main-header__top-inner">
-                                <div class="main-header__top-left">
-                                    <p class="main-header__top-left-text">Welcome to our Organic Store Ogenix!</p>
-                                    <div class="main-header__social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
+        <header class="main-header-two">
+            <div class="main-header-two__top">
+                <div class="container">
+                    <div class="main-header-two__top-inner">
+                        <div class="main-header-two__logo">
+                            <a href="index.html"><img src="assets/images/NaturalFood/logo.png" alt=""></a>
+                        </div>
+                        <div class="main-header-two__right">
+                            <ul class="list-unstyled main-header-two__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-mobile"></i>
                                     </div>
-                                </div>
-                                <div class="main-header__top-right">
-                                    <ul class="list-unstyled main-header__contact-list">
-                                        <li>
-                                            <div class="icon">
-                                                <i class="fas fa-mobile"></i>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <i class="fas fa-envelope-open"></i>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="text">
+                                        <p><a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:needhelp@company.com">info@natural-food.rs</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="main-header-two__search-cart-box">
+
+                                <div class="main-header-two__cart-box">
+                                    <a href="cart.html" class="main-header-two__cart icon-shopping-cart"></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="main-header__right-bottom">
-                            <nav class="main-menu">
-                                <div class="main-menu__wrapper">
-                                    <div class="main-menu__wrapper-inner">
-                                        <div class="main-menu__main-menu-box">
-                                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                            <ul class="main-menu__list">
-                                                <li class="dropdown megamenu">
-                                                    <a href="index.html">Home </a>
-                                                    <ul>
-                                                        <li>
-                                                            <section class="home-showcase">
-                                                                <div class="container">
-                                                                    <div class="home-showcase__inner">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                Page</a>
-                                                                                            <a href="index-one-page.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">One
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        01</h3>
-                                                                                    <!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index2.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                Page</a>
-                                                                                            <a href="index2-one-page.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">One
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        02
-                                                                                    </h3><!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index3.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                Page</a>
-                                                                                            <a href="index3-one-page.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">One
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        03
-                                                                                    </h3><!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-4.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index-dark.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">View
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        04
-                                                                                    </h3><!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                        </div><!-- /.row -->
-                                                                    </div><!-- /.home-showcase__inner -->
-
-                                                                </div><!-- /.container -->
-                                                            </section>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">About</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="about.html">About</a></li>
-                                                        <li><a href="team.html">Our Team</a></li>
-                                                        <li><a href="team-carousel.html">Team Carousel</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">Services</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services.html">Services</a></li>
-                                                        <li><a href="services-carousel.html">Service Carousel</a></li>
-                                                        <li><a href="agriculture-services.html">Agriculture services</a>
-                                                        </li>
-                                                        <li><a href="organic-services.html">Organic services</a></li>
-                                                        <li><a href="delivery-services.html">Delivery services</a></li>
-                                                        <li><a href="farming-products.html">Farming products</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">Pages</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="portfolio.html">Portfolio</a></li>
-                                                        <li><a href="portfolio-carousel.html">Portfolio Carousel</a>
-                                                        </li>
-                                                        <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                                        <li><a href="testimonials-carousel.html">Testimonials
-                                                                Carousel</a></li>
-                                                        <li><a href="pricing.html">Pricing</a></li>
-                                                        <li><a href="pricing-carousel.html">Pricing Carousel</a></li>
-                                                        <li><a href="faq.html">FAQs</a></li>
-                                                        <li><a href="404.html">404 Error</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="products.html">Products</a></li>
-                                                        <li><a href="product-list.html">Product List</a></li>
-                                                        <li><a href="product-details.html">Product Details</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                                        <li><a href="my-account.html">My Account</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">News</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="news.html">News</a></li>
-                                                        <li><a href="news-carousel.html">News Carousel</a></li>
-                                                        <li><a href="news-sidebar.html">News Sidebar</a></li>
-                                                        <li><a href="news-details.html">News Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="main-menu__right">
-                                            <div class="main-menu__search-cart-btn">
-                                                <div class="main-menu__search-cart-box">
-                                                    <div class="main-menu__search-box">
-                                                        <a href="#" class="main-menu__search search-toggler "><i
-                                                                class="icon-magnifying-glass"></i> Search here</a>
-                                                    </div>
-                                                    <div class="main-menu__cart-box">
-                                                        <a href="cart.html"
-                                                            class="main-menu__cart icon-shopping-cart"></a>
-                                                    </div>
-                                                </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="product-details.html" class="thm-btn main-menu__btn">Shop
-                                                        now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
+            <nav class="main-menu main-menu-two">
+                <div class="main-menu-two__wrapper">
+                    <div class="container">
+                        <div class="main-menu-two__wrapper-inner">
+                            <div class="main-header-two__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="main-menu-two__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li class=" current megamenu">
+                                        <a href="index2.html">POČETNA </a>
+
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">O NAMA</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">Natural Food</a></li>
+                                            <li><a href="team.html">Naš Tim</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="products.html">SHOP</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="news.html">VESTI</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html">RECEPTI</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio.html">GALERIJA</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">KONTAKT</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-menu-two__right">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
 
         <div class="stricky-header stricked-menu main-menu">
@@ -319,25 +194,6 @@
 
 
 
-
-        <!--Page Header Start-->
-        <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
-            </div>
-            <div class="page-header__ripped-paper"
-                style="background-image: url(assets/images/shapes/page-header-ripped-paper.png);"></div>
-            <div class="container">
-                <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><span>/</span></li>
-                        <li>Pages</li>
-                    </ul>
-                    <h2>Portfolio</h2>
-                </div>
-            </div>
-        </section>
-        <!--Page Header End-->
 
 
         <!--Portfolio page Start-->
@@ -349,306 +205,118 @@
                         <div class="gallery-one__single">
                             <div class="gallery-one__img-box">
                                 <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-1.jpg" alt="">
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija1.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
                                 </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Gallery One Single End-->
+                     <!--Gallery One Single Start-->
+                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img-box">
+                                <div class="gallery-one__img">
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija2.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Gallery One Single End-->
+                     <!--Gallery One Single Start-->
+                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img-box">
+                                <div class="gallery-one__img">
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija3.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Gallery One Single End-->
+                     <!--Gallery One Single Start-->
+                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img-box">
+                                <div class="gallery-one__img">
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija4.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Gallery One Single End-->
+                     <!--Gallery One Single Start-->
+                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img-box">
+                                <div class="gallery-one__img">
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija5.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Gallery One Single End-->
+                   
+                    <!--Gallery One Single End-->
+                    <!--Gallery One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img-box">
+                                <div class="gallery-one__img">
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija7.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Gallery One Single End-->
                     <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="gallery-one__single">
                             <div class="gallery-one__img-box">
                                 <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-2.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija8.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Gallery One Single End-->
                     <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="gallery-one__single">
                             <div class="gallery-one__img-box">
                                 <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-3.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
+                                    <!-- Dodajte klasu "zoomable" i cursor pointer -->
+                                    <img src="assets/images/NaturalFood/galerija9.jpg" alt="" class="zoomable"
+                                        style="cursor: pointer;">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Gallery One Single End-->
-                    <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="gallery-one__single">
-                            <div class="gallery-one__img-box">
-                                <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-4.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Gallery One Single End-->
-                    <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                        <div class="gallery-one__single">
-                            <div class="gallery-one__img-box">
-                                <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-5.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Gallery One Single End-->
-                    <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="600ms">
-                        <div class="gallery-one__single">
-                            <div class="gallery-one__img-box">
-                                <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-6.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Gallery One Single End-->
-                    <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="700ms">
-                        <div class="gallery-one__single">
-                            <div class="gallery-one__img-box">
-                                <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-7.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Gallery One Single End-->
-                    <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="800ms">
-                        <div class="gallery-one__single">
-                            <div class="gallery-one__img-box">
-                                <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-8.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Gallery One Single End-->
-                    <!--Gallery One Single Start-->
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="900ms">
-                        <div class="gallery-one__single">
-                            <div class="gallery-one__img-box">
-                                <div class="gallery-one__img">
-                                    <img src="assets/images/resources/gallery-1-9.jpg" alt="">
-                                </div>
-                                <div class="gallery-one__content-box">
-                                    <div class="gallery-one__content">
-                                        <div class="gallery-one__shape-1">
-                                            <img src="assets/images/shapes/gallery-one-shape-1.png" alt="">
-                                        </div>
-                                        <div class="gallery-one__title-box">
-                                            <h3 class="gallery-one__title"><a href="portfolio-details.html">Healthy
-                                                    food</a></h3>
-                                            <p class="gallery-one__sub-title">Vegan, Organic</p>
-                                        </div>
-                                    </div>
-                                    <div class="gallery-one__arrow-box">
-                                        <a href="portfolio-details.html" class="gallery-one__arrow"><span
-                                                class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Gallery One Single End-->
+
+
+
                 </div>
             </div>
         </section>
         <!--Portfolio page End-->
 
-        <!--Subscribe One Start-->
-        <section class="subscribe-one">
-            <div class="container">
-                <div class="subscribe-one__inner">
-                    <div class="subscribe-one__shape-1 float-bob-x">
-                        <img src="assets/images/shapes/subscribe-one-shape-1.png" alt="">
-                    </div>
-                    <div class="subscribe-one__shape-2 float-bob-y">
-                        <img src="assets/images/shapes/subscribe-one-shape-2.png" alt="">
-                    </div>
-                    <div class="subscribe-one__shape-4 float-bob-y">
-                        <img src="assets/images/shapes/subscribe-one-shape-4.png" alt="">
-                    </div>
-                    <div class="subscribe-one__shape-5 zoominout">
-                        <img src="assets/images/shapes/subscribe-one-shape-5.png" alt="">
-                    </div>
-                    <div class="subscribe-one__inner-content">
-                        <div class="subscribe-one__shape-3 float-bob-x">
-                            <img src="assets/images/shapes/subscribe-one-shape-3.png" alt="">
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="subscribe-one__left">
-                                    <div class="icon">
-                                        <span class="icon-folder"></span>
-                                    </div>
-                                    <div class="subscribe-one__title-box">
-                                        <span class="subscribe-one__tagline">Quisque vel ortor</span>
-                                        <h2 class="subscribe-one__title">Subscribe to newsletter</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="subscribe-one__right">
-                                    <div class="subscribe-one__shape-6 float-bob-x">
-                                        <img src="assets/images/shapes/subscribe-one-shape-6.png" alt="">
-                                    </div>
-                                    <div class="subscribe-one__form-box">
-                                        <form class="subscribe-one__form mc-form" data-url="MC_FORM_URL">
-                                            <div class="subscribe-one__input-box">
-                                                <input type="email" placeholder="Email Address" name="email">
-                                                <button type="submit" class="subscribe-one__btn"><i
-                                                        class="fas fa-paper-plane"></i></button>
-                                            </div>
-                                        </form>
-                                        <div class="mc-form__response"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Subscribe One End-->
 
-        <!--Site Footer Start-->
+
+        <!--Futer Natural Food Start-->
         <footer class="site-footer">
             <div class="site-footer__bg"
                 style="background-image: url(assets/images/backgrounds/site-footer-bg-img.png);"></div>
@@ -657,101 +325,61 @@
             <div class="container">
                 <div class="site-footer__top">
                     <div class="row">
+                        <!-- O nama -->
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget__column footer-widget__about">
                                 <div class="footer-widget__logo">
-                                    <a href="index.html"><img src="assets/images/resources/footer-logo.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/images/NaturalFood/logo_white.png"
+                                            alt="Natural Food"></a>
                                 </div>
                                 <div class="footer-widget__about-text-box">
-                                    <p class="footer-widget__about-text">We’re Providing Everyday Fresh <br> and
-                                        Quality
-                                        Products.</p>
+                                    <p class="footer-widget__about-text">
+                                        Prirodni i domaći proizvodi, pripremljeni tradicionalno i bez veštačkih
+                                        dodataka.
+                                        Tradicionalni ukusi u svakoj teglici!
+                                    </p>
                                 </div>
                                 <div class="footer-widget__social-box">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
+                        <!-- Istraži sekcija -->
                         <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                             <div class="footer-widget__column footer-widget__explore">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Explore</h3>
+                                    <h3 class="footer-widget__title">Istraži</h3>
                                 </div>
                                 <div class="footer-widget__explore-list-box">
                                     <ul class="footer-widget__explore-list list-unstyled">
-                                        <li><a href="about.html">About Company</a></li>
-                                        <li><a href="services.html">Our Services</a></li>
-                                        <li><a href="pricing.html">Become a Seller</a></li>
-                                        <li><a href="products.html">New Products</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="about.html">O nama</a></li>
+                                        <li><a href="products.html">Naši proizvodi</a></li>
+                                        <li><a href="recipes.html">Recepti</a></li>
+                                        <li><a href="events.html">Događaji</a></li>
+                                        <li><a href="contact.html">Kontakt</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        <!-- Kontakt informacije -->
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                             <div class="footer-widget__column footer-widget__contact">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Contact</h3>
+                                    <h3 class="footer-widget__title">Kontakt</h3>
                                 </div>
-                                <p class="footer-widget__contact-text">Valentin, Street Road 24, New York,
-                                    USA - 67452</p>
+                                <p class="footer-widget__contact-text">
+                                    Suvaja, 18420 Blace, Srbija
+                                </p>
                                 <ul class="list-unstyled footer-widget__contact-list">
                                     <li>
                                         <div class="text">
-                                            <p><a href="tel:928800688960">+92 (8800) 68 - 8960</a></p>
+                                            <p><a href="tel:+381601234567">+381 60 123 4567</a></p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="text">
-                                            <p><a href="mailto:info@example.com ">info@example.com</a></p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="footer-widget__column footer-widget__gallery">
-                                <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Gallery</h3>
-                                </div>
-                                <ul class="footer-widget__gallery-list list-unstyled clearfix">
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-1.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-2.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-3.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-4.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-5.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-6.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
+                                            <p><a href="mailto:info@naturalfood.rs">info@naturalfood.rs</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -760,22 +388,22 @@
                     </div>
                 </div>
             </div>
+            <!-- Donji deo futera -->
             <div class="site-footer__bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
                                 <div class="site-footer__bottom-left">
-                                    <p class="site-footer__bottom-text">© Copyright 2023 by <a href="#">Company.com</a>
-                                    </p>
+                                    <p class="site-footer__bottom-text">© 2024 Natural Food. Sva prava zadržana.</p>
                                 </div>
                                 <div class="site-footer__bottom-right">
                                     <ul class="list-unstyled site-footer__bottom-menu">
-                                        <li><a href="about.html">Terms & Conditions</a></li>
+                                        <li><a href="terms.html">Uslovi korišćenja</a></li>
                                         <li><span>/</span></li>
-                                        <li><a href="about.html">Privacy Policy</a></li>
+                                        <li><a href="privacy.html">Politika privatnosti</a></li>
                                         <li><span>/</span></li>
-                                        <li><a href="about.html">Privacy Policy</a></li>
+                                        <li><a href="cookies.html">Politika kolačića</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -784,7 +412,15 @@
                 </div>
             </div>
         </footer>
-        <!--Site Footer End-->
+        <!--Futer Natural Food End-->
+
+        <!-- Overlay za uvećanu sliku (sakriven po defaultu) -->
+        <div id="zoomOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+       background: rgba(0,0,0,0.8); align-items: center; justify-content: center; 
+       z-index: 9999;">
+            <img id="zoomImage" style="max-width: 90%; max-height: 90%; cursor: pointer;" alt="Uvećana slika">
+        </div>
+
 
 
     </div><!-- /.page-wrapper -->
@@ -797,8 +433,9 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="104"
-                        alt="" /></a>
+                <a href="index.html" aria-label="logo image">
+                    <img src="assets/images/NaturalFood/logo_white.png" width="104" alt="Natural Food" />
+                </a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -807,27 +444,25 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@ogenix.com</a>
+                    <a href="mailto:info@naturalfood.rs">info@naturalfood.rs</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+381601234567">+381 60 123 4567</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
+
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
                     <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
                     <a href="#" class="fab fa-instagram"></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 
-
-
         </div>
         <!-- /.mobile-nav__content -->
     </div>
+
     <!-- /.mobile-nav__wrapper -->
 
     <div class="search-popup">
@@ -880,6 +515,26 @@
 
     <!-- template js -->
     <script src="assets/js/ogenix.js"></script>
+
+    <script>
+        $(document).ready(function() {
+          // Klik na sliku s klasom "zoomable" - otvara overlay
+          $('.zoomable').on('click', function() {
+            var src = $(this).attr('src'); // putanja slike
+            $('#zoomImage').attr('src', src); // postavi putanju na overlay sliku
+            $('#zoomOverlay').fadeIn();       // prikazi overlay
+          });
+      
+          // Klikom na overlay (bilo gde osim na sliku) - zatvara overlay
+          $('#zoomOverlay').on('click', function(e) {
+            // Ako klik nije direktno na sliku, sakrij overlay
+            if (e.target.id !== 'zoomImage') {
+              $(this).fadeOut();
+            }
+          });
+        });
+      </script>
+      
 </body>
 
 </html>
