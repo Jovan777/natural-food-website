@@ -49,6 +49,12 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/ogenix.css" />
     <link rel="stylesheet" href="assets/css/ogenix-responsive.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
 </head>
 
 <body class="custom-cursor">
@@ -67,250 +73,92 @@
 
 
     <div class="page-wrapper">
-        <header class="main-header">
-            <div class="main-header__wrapper">
-                <div class="main-header__wrapper-inner">
-                    <div class="main-header__logo">
-                        <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
-                    </div>
-                    <div class="main-header__right">
-                        <div class="main-header__top">
-                            <div class="main-header__top-inner">
-                                <div class="main-header__top-left">
-                                    <p class="main-header__top-left-text">Welcome to our Organic Store Ogenix!</p>
-                                    <div class="main-header__social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
+        <header class="main-header-two">
+            <div class="main-header-two__top">
+                <div class="container">
+                    <div class="main-header-two__top-inner">
+                        <div class="main-header-two__logo">
+                            <a href="index.html"><img src="assets/images/NaturalFood/logo.png" alt=""></a>
+                        </div>
+                        <div class="main-header-two__right">
+                            <ul class="list-unstyled main-header-two__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-mobile"></i>
                                     </div>
-                                </div>
-                                <div class="main-header__top-right">
-                                    <ul class="list-unstyled main-header__contact-list">
-                                        <li>
-                                            <div class="icon">
-                                                <i class="fas fa-mobile"></i>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <i class="fas fa-envelope-open"></i>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="text">
+                                        <p><a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:needhelp@company.com">info@natural-food.rs</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="main-header-two__search-cart-box">
+
+                                <div class="main-header-two__cart-box">
+                                    <a href="cart.html" class="main-header-two__cart icon-shopping-cart"></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="main-header__right-bottom">
-                            <nav class="main-menu">
-                                <div class="main-menu__wrapper">
-                                    <div class="main-menu__wrapper-inner">
-                                        <div class="main-menu__main-menu-box">
-                                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                            <ul class="main-menu__list">
-                                                <li class="dropdown megamenu">
-                                                    <a href="index.html">Home </a>
-                                                    <ul>
-                                                        <li>
-                                                            <section class="home-showcase">
-                                                                <div class="container">
-                                                                    <div class="home-showcase__inner">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                Page</a>
-                                                                                            <a href="index-one-page.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">One
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        01</h3>
-                                                                                    <!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index2.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                Page</a>
-                                                                                            <a href="index2-one-page.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">One
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        02
-                                                                                    </h3><!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index3.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                Page</a>
-                                                                                            <a href="index3-one-page.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">One
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        03
-                                                                                    </h3><!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                            <div class="col-lg-3">
-                                                                                <div class="home-showcase__item">
-                                                                                    <div class="home-showcase__image">
-                                                                                        <img src="assets/images/home-showcase/home-showcase-1-4.jpg"
-                                                                                            alt="">
-                                                                                        <div
-                                                                                            class="home-showcase__buttons">
-                                                                                            <a href="index-dark.html"
-                                                                                                class="thm-btn home-showcase__buttons__item">View
-                                                                                                Page</a>
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__buttons -->
-                                                                                    </div>
-                                                                                    <!-- /.home-showcase__image -->
-                                                                                    <h3 class="home-showcase__title">
-                                                                                        Home
-                                                                                        Page
-                                                                                        04
-                                                                                    </h3><!-- /.home-showcase__title -->
-                                                                                </div><!-- /.home-showcase__item -->
-                                                                            </div><!-- /.col-lg-3 -->
-                                                                        </div><!-- /.row -->
-                                                                    </div><!-- /.home-showcase__inner -->
-
-                                                                </div><!-- /.container -->
-                                                            </section>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">About</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="about.html">About</a></li>
-                                                        <li><a href="team.html">Our Team</a></li>
-                                                        <li><a href="team-carousel.html">Team Carousel</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">Services</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services.html">Services</a></li>
-                                                        <li><a href="services-carousel.html">Service Carousel</a></li>
-                                                        <li><a href="agriculture-services.html">Agriculture services</a>
-                                                        </li>
-                                                        <li><a href="organic-services.html">Organic services</a></li>
-                                                        <li><a href="delivery-services.html">Delivery services</a></li>
-                                                        <li><a href="farming-products.html">Farming products</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">Pages</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="portfolio.html">Portfolio</a></li>
-                                                        <li><a href="portfolio-carousel.html">Portfolio Carousel</a>
-                                                        </li>
-                                                        <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                                        <li><a href="testimonials-carousel.html">Testimonials
-                                                                Carousel</a></li>
-                                                        <li><a href="pricing.html">Pricing</a></li>
-                                                        <li><a href="pricing-carousel.html">Pricing Carousel</a></li>
-                                                        <li><a href="faq.html">FAQs</a></li>
-                                                        <li><a href="404.html">404 Error</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="products.html">Products</a></li>
-                                                        <li><a href="product-list.html">Product List</a></li>
-                                                        <li><a href="product-details.html">Product Details</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                                        <li><a href="my-account.html">My Account</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a href="#">News</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="news.html">News</a></li>
-                                                        <li><a href="news-carousel.html">News Carousel</a></li>
-                                                        <li><a href="news-sidebar.html">News Sidebar</a></li>
-                                                        <li><a href="news-details.html">News Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="main-menu__right">
-                                            <div class="main-menu__search-cart-btn">
-                                                <div class="main-menu__search-cart-box">
-                                                    <div class="main-menu__search-box">
-                                                        <a href="#" class="main-menu__search search-toggler "><i
-                                                                class="icon-magnifying-glass"></i> Search here</a>
-                                                    </div>
-                                                    <div class="main-menu__cart-box">
-                                                        <a href="cart.html"
-                                                            class="main-menu__cart icon-shopping-cart"></a>
-                                                    </div>
-                                                </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="product-details.html" class="thm-btn main-menu__btn">Shop
-                                                        now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
+            <nav class="main-menu main-menu-two">
+                <div class="main-menu-two__wrapper">
+                    <div class="container">
+                        <div class="main-menu-two__wrapper-inner">
+                            <div class="main-header-two__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="main-menu-two__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li class="  megamenu">
+                                        <a href="index2.html">POČETNA </a>
+
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">O NAMA</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">Natural Food</a></li>
+                                            <li><a href="team.html">Naš Tim</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="products.html">SHOP</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="news.html">VESTI</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html">RECEPTI</a>
+                                    </li>
+                                    <li>
+                                        <a href="galery.html">GALERIJA</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">KONTAKT</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="main-menu-two__right">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
 
         <div class="stricky-header stricked-menu main-menu">
@@ -320,130 +168,84 @@
 
 
 
-        <!--Page Header Start-->
-        <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
-            </div>
-            <div class="page-header__ripped-paper"
-                style="background-image: url(assets/images/shapes/page-header-ripped-paper.png);"></div>
-            <div class="container">
-                <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><span>/</span></li>
-                        <li>Shop</li>
-                    </ul>
-                    <h2>Products</h2>
-                </div>
-            </div>
-        </section>
-        <!--Page Header End-->
+
 
         <!--Product Start-->
         <section class="product">
             <div class="container">
                 <div class="row">
+                    <!-- Sidebar sa filterima -->
                     <div class="col-xl-3 col-lg-3">
                         <div class="product__sidebar">
-                            <div class="shop-search product__sidebar-single">
-                                <form action="#">
-                                    <input type="text" placeholder="Search">
-                                </form>
-                            </div>
-                            <div class="product__price-ranger product__sidebar-single">
-                                <h3 class="product__sidebar-title">Price</h3>
-                                <div class="price-ranger">
-                                    <div id="slider-range"></div>
-                                    <div class="ranger-min-max-block">
-                                        <div class="ranger-min-max-block-box">
-                                            <input type="text" readonly class="min">
-                                            <span>-</span>
-                                            <input type="text" readonly class="max">
-                                        </div>
-                                        <div class="product__price-ranger-filter">
-                                            <input type="submit" value="Filter">
-                                        </div>
-                                    </div>
+                            <!-- Filtriranje po ceni -->
+                            <!-- Pogledajte Cenovnik -->
+                            <button id="openPriceList"
+                                style="padding: 10px 30px; font-size: 16px; cursor: pointer; background-color: #006400 !important; color: #fff !important; border: none; border-radius: 50px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: background-color 0.3s ease; text-transform: uppercase; letter-spacing: 1px;">
+                                Pogledajte Cenovnik
+                            </button>
+
+
+                            <!-- Overlay za prikaz slike (cenovnika) - sakriven po defaultu -->
+                            <!-- Overlay za prikaz slike (cenovnika) - sakriven po defaultu -->
+                            <div id="priceListOverlay"
+                                style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); display: none; z-index: 9999; align-items: center; justify-content: center;">
+                                <div style="position: relative; text-align: center; max-width: 90%; max-height: 90%;">
+                                    <img id="priceListImage" src="assets/images/NaturalFood/Cenovnik_Resized.png"
+                                        alt="Cenovnik"
+                                        style="max-width: 100%; max-height: 100%; object-fit: contain; border: 5px solid #fff; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                                    <button id="closePriceList"
+                                        style="position: absolute; top: -20px; right: -20px; background-color: #ff0000; color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-size: 16px;">X</button>
                                 </div>
                             </div>
+
+
+                            <script>
+                                $(document).ready(function () {
+                                    // Kada se klikne na dugme "Pogledajte Cenovnik", postavi display: flex i otvori overlay
+                                    $("#openPriceList").on("click", function () {
+                                        $("#priceListOverlay").css("display", "flex").hide().fadeIn();
+                                    });
+
+                                    // Zatvori overlay klikom na dugme "Zatvori"
+                                    $("#closePriceList").on("click", function () {
+                                        $("#priceListOverlay").fadeOut();
+                                    });
+
+                                    // Opcionalno: Zatvori overlay klikom van sadržaja slike
+                                    $("#priceListOverlay").on("click", function (e) {
+                                        if (e.target.id === "priceListOverlay") {
+                                            $(this).fadeOut();
+                                        }
+                                    });
+                                });
+                            </script>
+                            <br><br>
+
+
+                            <!-- Filtriranje po kategorijama -->
                             <div class="shop-category product__sidebar-single">
-                                <h3 class="product__sidebar-title">Categories</h3>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Bread & Bakery <span>(9)</span></a></li>
-                                    <li class="active"><a href="#">Dairy Milk <span>(8)</span></a></li>
-                                    <li><a href="#">Fresh Meat <span>(10)</span></a></li>
-                                    <li><a href="#">Tea & Coffee <span>(16)</span></a></li>
-                                    <li><a href="#">Organic Food <span>(4)</span></a></li>
-                                    <li><a href="#">Fresh Vegetables <span>(3)</span></a></li>
-                                    <li><a href="#">Fresh Fruits <span>(10)</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="shop-best-sellers product__sidebar-single">
-                                <h3 class="product__sidebar-title">Best sellers</h3>
-                                <ul class="list-unstyled shop-best-sellers__list">
-                                    <li>
-                                        <div class="shop-best-sellers__img">
-                                            <img src="assets/images/shop/shop-best-sellers-img-1-1.jpg" alt="">
-                                        </div>
-                                        <div class="shop-best-sellers__content">
-                                            <div class="shop-best-sellers__review">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h4 class="shop-best-sellers__title"><a
-                                                    href="product-details.html">Carrot</a></h4>
-                                            <p class="shop-best-sellers__rate">$9.00</p>
-                                        </div>
+                                <h3 class="product__sidebar-title">Kategorije</h3>
+                                <ul class="list-unstyled" id="categoryFilter">
+                                    <li><a href="#" data-category="all">Svi Proizvodi <span>(9)</span></a>
                                     </li>
-                                    <li>
-                                        <div class="shop-best-sellers__img">
-                                            <img src="assets/images/shop/shop-best-sellers-img-1-2.jpg" alt="">
-                                        </div>
-                                        <div class="shop-best-sellers__content">
-                                            <div class="shop-best-sellers__review">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h4 class="shop-best-sellers__title"><a href="product-details.html">Green
-                                                    grapes</a></h4>
-                                            <p class="shop-best-sellers__rate">$16.00</p>
-                                        </div>
+                                    <li><a href="#" data-category="dzemovi-slatka">Džemovi i Slatka <span>(9)</span></a>
                                     </li>
-                                    <li>
-                                        <div class="shop-best-sellers__img">
-                                            <img src="assets/images/shop/shop-best-sellers-img-1-3.jpg" alt="">
-                                        </div>
-                                        <div class="shop-best-sellers__content">
-                                            <div class="shop-best-sellers__review">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <h4 class="shop-best-sellers__title"><a
-                                                    href="product-details.html">Apples</a></h4>
-                                            <p class="shop-best-sellers__rate">$23.00</p>
-                                        </div>
+                                    <li><a href="#" data-category="zimnica">Zimnica <span>(8)</span></a></li>
+                                    <li><a href="#" data-category="domaci-sirupi">Domaći Sirupi <span>(10)</span></a>
+                                    </li>
+                                    <li><a href="#" data-category="maticni-sokovi">Matični Sokovi <span>(16)</span></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- Glavni deo sa proizvodima -->
                     <div class="col-xl-9 col-lg-9">
                         <div class="product__items">
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="product__showing-result">
-                                        <div class="product__showing-text-box">
-                                            <p class="product__showing-text">Showing 1–9 of 12 Results</p>
-                                        </div>
+                                        >
                                         <div class="product__menu-showing-sort">
                                             <div class="product__menu">
                                                 <a href="products.html" class="product__menu-icon-one"><span
@@ -451,13 +253,15 @@
                                                 <a href="products.html" class="product__menu-icon-two"><span
                                                         class="icon-list"></span></a>
                                             </div>
+                                            <!-- Select za sortiranje -->
                                             <div class="product__showing-sort">
                                                 <div class="select-box">
-                                                    <select class="wide">
-                                                        <option data-display="Sort by popular">Sort by popular</option>
-                                                        <option value="1">Sort by popular</option>
-                                                        <option value="2">Sort by Price</option>
-                                                        <option value="3">Sort by Ratings</option>
+                                                    <select class="wide" id="sortOptions">
+                                                        <option data-display="Sortiranje" value="default"></option>
+                                                        <option value="price-asc">Cena: od najniže ka najvišoj</option>
+                                                        <option value="price-desc">Cena: od najviše ka najnižoj</option>
+                                                        <option value="name-asc">Naziv: A - Z</option>
+                                                        <option value="name-desc">Naziv: Z - A</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -466,303 +270,573 @@
                                 </div>
                             </div>
                             <div class="product__all">
-                                <div class="row">
+                                <div class="row" id="productList">
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="18" data-name="Barena Cvekla 700g"
+                                            data-category="zimnica">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-1.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Barena Cvekla 700g.png" alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a
-                                                            href="product-details.html">Bananas</a></h4>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Barena
+                                                            Cvekla 700g</a></h4>
                                                     <p class="product__all-price">$18.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
+
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="22"
+                                            data-name="Barena Paprika 1450g" data-category="zimnica">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-2.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Barena Paprika 1450g.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a
-                                                            href="product-details.html">Potatos</a></h4>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Barena
+                                                            Paprika 1450g</a></h4>
                                                     <p class="product__all-price">$22.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
+
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaca Ljutenica 350g" data-category="zimnica">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-3.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Domaca Ljutenica 350g.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a
-                                                            href="product-details.html">Apples</a></h4>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaca
+                                                            Ljutenica 350g</a></h4>
                                                     <p class="product__all-price">$16.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaca Sarena Salata 700g" data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaca Sarena Salata 700g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaca
+                                                            Sarena Salata 700g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
+
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domace Slatko od Aronije 480g" data-category="dzemovi-slatka">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-4.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Domace Slatko od Aronije 480g.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domace
+                                                            Slatko od Aronije 480g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domace Slatko od Sljiva 480g" data-category="dzemovi-slatka">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domace Slatko od Sljiva 480g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domace
+                                                            Slatko od Sljiva 480g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domace Slatko od Sumskih Jagoda 480g"
+                                            data-category="dzemovi-slatka">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domace Slatko od Sumskih Jagoda 480g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domace
+                                                            Slatko od Sumskih Jagoda 480g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domace Slatko od Visanja 480g" data-category="dzemovi-slatka">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domace Slatko od Visanja 480g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domace
+                                                            Slatko od Visanja 480g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Ajvar od Pecene Paprike blagi 350g"
+                                            data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Ajvar od Pecene Paprike blagi 350g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Ajvar od Pecene Paprike blagi 350g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Ajvar od Pecene Paprike blagi 750g"
+                                            data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Ajvar od Pecene Paprike blagi 750g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Ajvar od Pecene Paprike blagi</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Ajvar od Pecene Paprike Ljuti 350g"
+                                            data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Ajvar od Pecene Paprike Ljuti 350g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Ajvar od Pecene Paprike Ljuti 350g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Ajvar od Pecene Paprike Ljuti 750g"
+                                            data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Ajvar od Pecene Paprike Ljuti 750g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Ajvar od Pecene Paprike Ljuti 750g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Dzem od Kajsije" data-category="dzemovi-slatka">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Dzem od Kajsije.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Dzem od Kajsije</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Dzem od Sipuraka" data-category="dzemovi-slatka">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Dzem od Sipuraka.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Dzem od Sipuraka</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Kornisoni 680g" data-category="dzemovi-slatka">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Kornisoni 680g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Kornisoni 680g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Pekmez od Sljiva bez secera 820g"
+                                            data-category="domaci-sirupi">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Pekmez od Sljiva bez secera 820g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Pekmez od Sljiva bez secera 820g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Pekmez od Sljiva sa Cokoladom i Pomorandzinom korom 820g"
+                                            data-category="domaci-sirupi">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Pekmez od Sljiva sa Cokoladom i Pomorandzinom korom 820g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Pekmez od Sljiva sa Cokoladom i Pomorandzinom korom 820g</a>
+                                                    </h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Pindjur od Pecene Paprike Ljuti 360g"
+                                            data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Pindjur od Pecene Paprike  Ljuti 360g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Pindjur od Pecene Paprike Ljuti 360g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Pindjur od Pecene Paprike Blagi 360g"
+                                            data-category="zimnica">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Pindjur od Pecene Paprike Blagi 360g.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Pindjur od Pecene Paprike Blagi 360g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaci Sok od Paradajza sa Bosiljkom 1l"
+                                            data-category="maticni-sokovi">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Domaci Sok od Paradajza sa Bosiljkom 1l.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaci
+                                                            Sok od Paradajza sa Bosiljkom</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
+                                                    <div class="product__all-btn-box">
+                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
+                                                            cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Product All Single End-->
+
+                                    <!--Product All Single Start-->
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Maticni Sok od Borovnice 500ml" data-category="maticni-sokovi">
+                                            <div class="product__all-single-inner">
+                                                <div class="product__all-img">
+                                                    <img src="assets/images/NaturalFood/Maticni Sok od Borovnice 500ml.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="product__all-content">
                                                     <h4 class="product__all-title"><a
-                                                            href="product-details.html">Lettus</a></h4>
-                                                    <p class="product__all-price">$9.00</p>
+                                                            href="product-details.html">Maticni Sok od Borovnice
+                                                            500ml</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
+
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Domaca Ljutenica 350g" data-category="zimnica">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-5.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Domaca Ljutenica 350g.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a href="product-details.html">Brown
-                                                            bread</a></h4>
-                                                    <p class="product__all-price">$23.00</p>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Domaca
+                                                            Ljutenica 350g</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
+
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Sirup od Maline i Visnje 1l" data-category="domaci-sirupi">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-6.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Sirup od Maline i Visnje 1l.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a
-                                                            href="product-details.html">Lemos</a></h4>
-                                                    <p class="product__all-price">$10.00</p>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Sirup
+                                                            od Maline i Visnje 1l</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
+
                                     <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
+                                    <div class="col-xl-3 col-lg-3 col-md-6">
+                                        <div class="product__all-single" data-price="16"
+                                            data-name="Sirup od Sumske Kupine 1l" data-category="domaci-sirupi">
                                             <div class="product__all-single-inner">
                                                 <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-7.jpg" alt="">
+                                                    <img src="assets/images/NaturalFood/Sirup od Sumske Kupine 1l.png"
+                                                        alt="">
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a href="product-details.html">Red
-                                                            grapes</a></h4>
-                                                    <p class="product__all-price">$17.00</p>
+                                                    <h4 class="product__all-title"><a href="product-details.html">Sirup
+                                                            od Sumske Kupine 1l</a></h4>
+                                                    <p class="product__all-price">$16.00</p>
                                                     <div class="product__all-btn-box">
                                                         <a href="cart.html" class="thm-btn product__all-btn">Add to
                                                             cart</a>
                                                     </div>
                                                 </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
-                                            <div class="product__all-single-inner">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-8.jpg" alt="">
-                                                </div>
-                                                <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a
-                                                            href="product-details.html">Tomattos</a></h4>
-                                                    <p class="product__all-price">$23.00</p>
-                                                    <div class="product__all-btn-box">
-                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
-                                                            cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6">
-                                        <div class="product__all-single">
-                                            <div class="product__all-single-inner">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-9.jpg" alt="">
-                                                </div>
-                                                <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <h4 class="product__all-title"><a
-                                                            href="product-details.html">Onions</a></h4>
-                                                    <p class="product__all-price">$8.00</p>
-                                                    <div class="product__all-btn-box">
-                                                        <a href="cart.html" class="thm-btn product__all-btn">Add to
-                                                            cart</a>
-                                                    </div>
-                                                </div>
-                                                <div class="products__all-icon-boxes">
-                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="shop-page__pagination">
-                                            <ul class="pg-pagination list-unstyled">
-                                                <li class="count"><a href="#">01</a></li>
-                                                <li class="count"><a href="#">02</a></li>
-                                                <li class="count"><a href="#">....</a></li>
-                                                <li class="count"><a href="#">05</a></li>
-                                                <li class="next">
-                                                    <a href="#" aria-label="Next"><i class="fa fa-angle-right"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -770,63 +844,9 @@
         </section>
         <!--Product End-->
 
-        <!--Subscribe One Start-->
-        <section class="subscribe-one">
-            <div class="container">
-                <div class="subscribe-one__inner">
-                    <div class="subscribe-one__shape-1 float-bob-x">
-                        <img src="assets/images/shapes/subscribe-one-shape-1.png" alt="">
-                    </div>
-                    <div class="subscribe-one__shape-2 float-bob-y">
-                        <img src="assets/images/shapes/subscribe-one-shape-2.png" alt="">
-                    </div>
-                    <div class="subscribe-one__shape-4 float-bob-y">
-                        <img src="assets/images/shapes/subscribe-one-shape-4.png" alt="">
-                    </div>
-                    <div class="subscribe-one__shape-5 zoominout">
-                        <img src="assets/images/shapes/subscribe-one-shape-5.png" alt="">
-                    </div>
-                    <div class="subscribe-one__inner-content">
-                        <div class="subscribe-one__shape-3 float-bob-x">
-                            <img src="assets/images/shapes/subscribe-one-shape-3.png" alt="">
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="subscribe-one__left">
-                                    <div class="icon">
-                                        <span class="icon-folder"></span>
-                                    </div>
-                                    <div class="subscribe-one__title-box">
-                                        <span class="subscribe-one__tagline">Quisque vel ortor</span>
-                                        <h2 class="subscribe-one__title">Subscribe to newsletter</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="subscribe-one__right">
-                                    <div class="subscribe-one__shape-6 float-bob-x">
-                                        <img src="assets/images/shapes/subscribe-one-shape-6.png" alt="">
-                                    </div>
-                                    <div class="subscribe-one__form-box">
-                                        <form class="subscribe-one__form mc-form" data-url="MC_FORM_URL">
-                                            <div class="subscribe-one__input-box">
-                                                <input type="email" placeholder="Email Address" name="email">
-                                                <button type="submit" class="subscribe-one__btn"><i
-                                                        class="fas fa-paper-plane"></i></button>
-                                            </div>
-                                        </form>
-                                        <div class="mc-form__response"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Subscribe One End-->
 
-        <!--Site Footer Start-->
+
+        <!--Futer Natural Food Start-->
         <footer class="site-footer">
             <div class="site-footer__bg"
                 style="background-image: url(assets/images/backgrounds/site-footer-bg-img.png);"></div>
@@ -835,101 +855,61 @@
             <div class="container">
                 <div class="site-footer__top">
                     <div class="row">
+                        <!-- O nama -->
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget__column footer-widget__about">
                                 <div class="footer-widget__logo">
-                                    <a href="index.html"><img src="assets/images/resources/footer-logo.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/images/NaturalFood/logo_white.png"
+                                            alt="Natural Food"></a>
                                 </div>
                                 <div class="footer-widget__about-text-box">
-                                    <p class="footer-widget__about-text">We’re Providing Everyday Fresh <br> and
-                                        Quality
-                                        Products.</p>
+                                    <p class="footer-widget__about-text">
+                                        Prirodni i domaći proizvodi, pripremljeni tradicionalno i bez veštačkih
+                                        dodataka.
+                                        Tradicionalni ukusi u svakoj teglici!
+                                    </p>
                                 </div>
                                 <div class="footer-widget__social-box">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
+                        <!-- Istraži sekcija -->
                         <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                             <div class="footer-widget__column footer-widget__explore">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Explore</h3>
+                                    <h3 class="footer-widget__title">Istraži</h3>
                                 </div>
                                 <div class="footer-widget__explore-list-box">
                                     <ul class="footer-widget__explore-list list-unstyled">
-                                        <li><a href="about.html">About Company</a></li>
-                                        <li><a href="services.html">Our Services</a></li>
-                                        <li><a href="pricing.html">Become a Seller</a></li>
-                                        <li><a href="products.html">New Products</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="about.html">O nama</a></li>
+                                        <li><a href="products.html">Naši proizvodi</a></li>
+                                        <li><a href="recipes.html">Recepti</a></li>
+                                        <li><a href="events.html">Događaji</a></li>
+                                        <li><a href="contact.html">Kontakt</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        <!-- Kontakt informacije -->
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                             <div class="footer-widget__column footer-widget__contact">
                                 <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Contact</h3>
+                                    <h3 class="footer-widget__title">Kontakt</h3>
                                 </div>
-                                <p class="footer-widget__contact-text">Valentin, Street Road 24, New York,
-                                    USA - 67452</p>
+                                <p class="footer-widget__contact-text">
+                                    Suvaja, 18420 Blace, Srbija
+                                </p>
                                 <ul class="list-unstyled footer-widget__contact-list">
                                     <li>
                                         <div class="text">
-                                            <p><a href="tel:928800688960">+92 (8800) 68 - 8960</a></p>
+                                            <p><a href="tel:+381601234567">+381 60 123 4567</a></p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="text">
-                                            <p><a href="mailto:info@example.com ">info@example.com</a></p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="footer-widget__column footer-widget__gallery">
-                                <div class="footer-widget__title-box">
-                                    <h3 class="footer-widget__title">Gallery</h3>
-                                </div>
-                                <ul class="footer-widget__gallery-list list-unstyled clearfix">
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-1.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-2.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-3.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-4.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-5.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="footer-widget__gallery-img">
-                                            <img src="assets/images/resources/footer-widget-gallery-img-6.jpg" alt="">
-                                            <a href="portfolio-details.html"><span class="fa fa-link"></span></a>
+                                            <p><a href="mailto:info@naturalfood.rs">info@naturalfood.rs</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -938,22 +918,22 @@
                     </div>
                 </div>
             </div>
+            <!-- Donji deo futera -->
             <div class="site-footer__bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
                                 <div class="site-footer__bottom-left">
-                                    <p class="site-footer__bottom-text">© Copyright 2023 by <a href="#">Company.com</a>
-                                    </p>
+                                    <p class="site-footer__bottom-text">© 2024 Natural Food. Sva prava zadržana.</p>
                                 </div>
                                 <div class="site-footer__bottom-right">
                                     <ul class="list-unstyled site-footer__bottom-menu">
-                                        <li><a href="about.html">Terms & Conditions</a></li>
+                                        <li><a href="terms.html">Uslovi korišćenja</a></li>
                                         <li><span>/</span></li>
-                                        <li><a href="about.html">Privacy Policy</a></li>
+                                        <li><a href="privacy.html">Politika privatnosti</a></li>
                                         <li><span>/</span></li>
-                                        <li><a href="about.html">Privacy Policy</a></li>
+                                        <li><a href="cookies.html">Politika kolačića</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -962,7 +942,142 @@
                 </div>
             </div>
         </footer>
-        <!--Site Footer End-->
+        <!--Futer Natural Food End-->
+
+        <script>
+            $(document).ready(function () {
+                // Inicijalizacija slidera za filtriranje po ceni
+                $("#slider-range").slider({
+                    range: true,
+                    min: 0,
+                    max: 100,
+                    values: [10, 90],
+                    slide: function (event, ui) {
+                        $(".min").val("$" + ui.values[0]);
+                        $(".max").val("$" + ui.values[1]);
+                    }
+                });
+                $(".min").val("$" + $("#slider-range").slider("values", 0));
+                $(".max").val("$" + $("#slider-range").slider("values", 1));
+
+                // Sortiranje proizvoda
+                $("#sortOptions").change(function () {
+                    var sortValue = $(this).val();
+                    // Sortiramo direktne kolone unutar #productList
+                    var products = $("#productList > div");
+
+                    products.sort(function (a, b) {
+                        var aPrice = parseFloat($(a).find('.product__all-single').data('price'));
+                        var bPrice = parseFloat($(b).find('.product__all-single').data('price'));
+                        var aName = $(a).find('.product__all-single').data('name').toLowerCase();
+                        var bName = $(b).find('.product__all-single').data('name').toLowerCase();
+
+                        if (sortValue === 'price-asc') {
+                            return aPrice - bPrice;
+                        } else if (sortValue === 'price-desc') {
+                            return bPrice - aPrice;
+                        } else if (sortValue === 'name-asc') {
+                            return aName.localeCompare(bName);
+                        } else if (sortValue === 'name-desc') {
+                            return bName.localeCompare(aName);
+                        } else {
+                            return 0;
+                        }
+                    });
+
+                    $("#productList").html(products);
+                });
+
+                // Filtriranje po kategoriji
+                $("#categoryFilter a").click(function (e) {
+                    e.preventDefault();
+                    var selectedCategory = $(this).data('category');
+
+                    if (selectedCategory === "all") {
+                        // Ako je "Svi Proizvodi" izabrano, prikaži sve proizvode
+                        $("#productList > div").show();
+                    } else {
+                        // Inače, filtriraj prema data-category atributu
+                        $("#productList > div").each(function () {
+                            var productCategory = $(this).find('.product__all-single').data('category');
+                            if (productCategory === selectedCategory) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    }
+                });
+
+
+                // Filtriranje po ceni
+                $("#priceFilterBtn").click(function (e) {
+                    e.preventDefault();
+                    var minPrice = parseFloat($(".min").val().replace('$', ''));
+                    var maxPrice = parseFloat($(".max").val().replace('$', ''));
+
+                    $("#productList > div").each(function () {
+                        var productPrice = parseFloat($(this).find('.product__all-single').data('price'));
+                        if (productPrice >= minPrice && productPrice <= maxPrice) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $(".product__all-btn").on("click", function (e) {
+                    e.preventDefault();
+
+                    // Dohvati roditeljski element proizvoda
+                    var $product = $(this).closest(".product__all-single");
+
+                    // Izvuci podatke o proizvodu
+                    var name = $product.data("name");       // naziv proizvoda
+                    var price = $product.data("price");       // cena
+                    var category = $product.data("category"); // kategorija
+
+                    // Ključ pod kojim se čuvaju proizvodi u localStorage
+                    var storageKey = "NaturalFoodProizvodi";
+
+                    // Učitaj postojeću grupu iz localStorage (ako postoji)
+                    var cart = localStorage.getItem(storageKey);
+                    if (cart) {
+                        cart = JSON.parse(cart);
+                    } else {
+                        cart = []; // inicijalizuj prazan niz ako ne postoji
+                    }
+
+                    // Proveri da li proizvod već postoji u korpi
+                    var productFound = cart.find(function (item) {
+                        return item.name === name;
+                    });
+
+                    if (productFound) {
+                        // Ako proizvod već postoji, poveća se količina
+                        productFound.quantity += 1;
+                    } else {
+                        // Ako proizvod ne postoji, dodaje se novi proizvod sa količinom 1
+                        cart.push({
+                            name: name,
+                            price: price,
+                            category: category,
+                            quantity: 1
+                        });
+                    }
+
+                    // Sačuvaj ažuriranu korpu u localStorage
+                    localStorage.setItem(storageKey, JSON.stringify(cart));
+
+                    // Opcionalno: obavesti korisnika
+                    alert("Proizvod je dodat u korpu!");
+                });
+            });
+        </script>
 
 
     </div><!-- /.page-wrapper -->
@@ -975,8 +1090,9 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="104"
-                        alt="" /></a>
+                <a href="index.html" aria-label="logo image">
+                    <img src="assets/images/NaturalFood/logo_white.png" width="104" alt="Natural Food" />
+                </a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -985,27 +1101,25 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@ogenix.com</a>
+                    <a href="mailto:info@naturalfood.rs">info@naturalfood.rs</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+381601234567">+381 60 123 4567</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
+
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
                     <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
                     <a href="#" class="fab fa-instagram"></a>
                 </div><!-- /.mobile-nav__social -->
             </div><!-- /.mobile-nav__top -->
 
-
-
         </div>
         <!-- /.mobile-nav__content -->
     </div>
+
     <!-- /.mobile-nav__wrapper -->
 
     <div class="search-popup">
@@ -1058,6 +1172,9 @@
 
     <!-- template js -->
     <script src="assets/js/ogenix.js"></script>
+
+
+
 </body>
 
 </html>
