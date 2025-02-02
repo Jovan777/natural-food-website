@@ -533,6 +533,13 @@
             $("#checkoutForm").on("submit", function (event) {
                 event.preventDefault(); // Sprečava podrazumevano slanje forme
 
+                // Provera da li je korpa prazna
+                var cart = loadCart();
+                if (cart.length === 0) {
+                    alert("Korpa je prazna. Molimo dodajte proizvod u korpu pre naručivanja.");
+                    return false;
+                }
+
                 if (this.checkValidity()) { // Provera validnosti forme
                     // Prvi EmailJS poziv: slanje porudžbine (admin email)
                     emailjs.sendForm('service_gz7rmv8', 'template_96uzdmv', this)
@@ -545,13 +552,12 @@
                                 address: $('input[name="address"]').val(),
                                 city: $('input[name="city"]').val(),
                                 zip: $('input[name="zip"]').val(),
-                                email: $('input[name="email"]').val(), // ili, ako šablon koristi {{email}}, onda: email: $('input[name="email"]').val()
+                                email: $('input[name="email"]').val(), // ako šablon koristi {{email}}
                                 phone: $('input[name="phone"]').val(),
                                 order_summary: $('#orderSummary').val(),
-                                order_total: $('#orderTotal').val(), // Dodato – ukupna cena
+                                order_total: $('#orderTotal').val(), // ukupna cena
                                 subject: "Potvrda porudžbine"
                             };
-
 
                             // Drugi EmailJS poziv: slanje potvrde kupcu koristeći šablon template_50hpm79
                             emailjs.send('service_gz7rmv8', 'template_50hpm79', customerData)
@@ -574,6 +580,7 @@
             });
         });
     </script>
+
 
 
 </body>
