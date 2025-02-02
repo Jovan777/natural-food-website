@@ -225,6 +225,7 @@
                                 </div>
                                 <!-- Skriveno polje za tekstualni opis porudžbine -->
                                 <input type="hidden" name="order_summary" id="orderSummary">
+                                <input type="hidden" name="order_total" id="orderTotal">
                                 <div class="contact-page__btn-box">
                                     <button type="submit" class="thm-btn contact-page__btn">Pošaljite
                                         porudžbinu</button>
@@ -522,6 +523,8 @@
             $("#cartSubtotal").text('$' + subtotal.toFixed(2) + ' USD');
             $("#cartTotal").text('$' + subtotal.toFixed(2) + ' USD');
             $("#orderSummary").val(orderText);
+            // Postavljamo ukupnu cenu u skriveno polje
+            $("#orderTotal").val(subtotal.toFixed(2));
         }
 
         $(document).ready(function () {
@@ -536,11 +539,19 @@
                         .then(function () {
                             // Nakon uspešnog slanja admin emaila, pripremamo podatke za potvrdu kupcu
                             var customerData = {
-                                user_name: $('input[name="first_name"]').val() + ' ' + $('input[name="last_name"]').val(),
-                                email: $('input[name="email"]').val(), // ključ mora odgovarati onome što EmailJS šablon očekuje
+                                first_name: $('input[name="first_name"]').val(),
+                                last_name: $('input[name="last_name"]').val(),
+                                company_name: $('input[name="company_name"]').val(),
+                                address: $('input[name="address"]').val(),
+                                city: $('input[name="city"]').val(),
+                                zip: $('input[name="zip"]').val(),
+                                email: $('input[name="email"]').val(), // ili, ako šablon koristi {{email}}, onda: email: $('input[name="email"]').val()
+                                phone: $('input[name="phone"]').val(),
                                 order_summary: $('#orderSummary').val(),
+                                order_total: $('#orderTotal').val(), // Dodato – ukupna cena
                                 subject: "Potvrda porudžbine"
                             };
+
 
                             // Drugi EmailJS poziv: slanje potvrde kupcu koristeći šablon template_50hpm79
                             emailjs.send('service_gz7rmv8', 'template_50hpm79', customerData)
