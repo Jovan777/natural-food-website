@@ -163,117 +163,120 @@
 
 
 
-        <!--Start Checkout Page-->
+        <!--Checkout Page Start-->
         <section class="checkout-page">
             <div class="container">
                 <div class="row">
+                    <!-- Leva kolona – Billing Details -->
                     <div class="col-xl-6 col-lg-6">
                         <div class="billing_details">
-                            
-                            <form class="billing_details_form">
+                            <!-- Dodeljujemo formi id="checkoutForm" i uklanjamo action -->
+                            <form id="checkoutForm" class="billing_details_form">
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="first_name" placeholder="Ime" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="last_name" placeholder="Prezime" required>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
-                                    
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="company_name" placeholder="Firma (opciono)">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="address" placeholder="Adresa" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="address2"
+                                                placeholder="Stan, jedinica, itd. (opciono)">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="billing_input_box">
+                                            <input type="text" name="city" placeholder="Grad / Mesto" required>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row bs-gutter-x-20">
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="text" name="first_name" value="" placeholder="First name"
-                                                required="">
+                                            <input type="text" name="zip" pattern="[0-9]*" placeholder="Poštanski broj">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="text" name="last_name" value="" placeholder="Last name"
-                                                required="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="company_name" value="" placeholder="Company">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="Address" value="" placeholder="Address">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="company_name" value=""
-                                                placeholder="Appartment, Unit, etc. (optional)">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="Town/City" value="" placeholder="Town / City"
-                                                required="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row bs-gutter-x-20">
-                                   
-                                   
-                                    <div class="col-xl-6">
-                                        <div class="billing_input_box">
-                                            <input name="email" type="email" placeholder="Email address">
+                                            <input type="email" name="email" placeholder="Email adresa" required>
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="tel" name="form_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                                required="" placeholder="Phone">
+                                            <input type="tel" name="phone" pattern="\+381[0-9]{8,9}" placeholder="Telefon (npr. +381642418996)" required>
                                         </div>
+                                        
                                     </div>
                                 </div>
-                                <div class="row">
-                                   
+                                <!-- Skriveno polje za tekstualni opis porudžbine, koji ćemo generisati dinamički -->
+                                <input type="hidden" name="order_summary" id="orderSummary">
+                                <!-- Dugme za slanje porudžbine -->
+                                <div class="contact-page__btn-box">
+                                    <button type="submit" class="thm-btn contact-page__btn">Pošaljite
+                                        porudžbinu</button>
                                 </div>
                             </form>
+                            <div class="result"></div>
                         </div>
                     </div>
 
-
+                    <!-- Desna kolona – Vaša narudžbina -->
                     <div class="col-xl-6 col-lg-6">
-                        <h2>Your order</h2>
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="order_table_box">
-                                    <table class="order_table_detail">
-                                        <thead class="order_table_head">
-                                            <tr>
-                                                <th>Product</th>
-                                                <th class="right">Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="pro__title">Product Name</td>
-                                                <td class="pro__price">$10.99 USD</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="pro__title">Subtotal</td>
-                                                <td class="pro__price">$10.99 USD</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="pro__title">Shipping</td>
-                                                <td class="pro__price">$0.00 USD</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="pro__title">Total</td>
-                                                <td class="pro__price">$20.98 USD</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                        <h2>Vaša narudžbina</h2>
+                        <div class="order_table_box">
+                            <table class="order_table_detail">
+                                <thead class="order_table_head">
+                                    <tr>
+                                        <th>Proizvod</th>
+                                        <th class="right">Cena</th>
+                                        <th class="right">Količina</th>
+                                        <th class="right">Ukupno</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderTableBody">
+                                    <!-- Dinamički generisani redovi iz localStorage -->
+                                </tbody>
+                            </table>
                         </div>
+                        <br>
+                        <ul class="cart-total list-unstyled">
+                            <li>
+                                <span>Cena Proizvoda</span>
+                                <span id="cartSubtotal">$0.00 USD</span>
+                            </li>
+                            <li>
+                                <span>Dostava</span>
+                                <span>$0.00 USD</span>
+                            </li>
+                            <li>
+                                <span>Ukupno</span>
+                                <span class="cart-total-amount" id="cartTotal">$0.00 USD</span>
+                            </li>
+                        </ul>
                     </div>
-
                 </div>
+            </div>
         </section>
-        <!--End Checkout Page-->
+        <!--Checkout Page End-->
+
+
 
 
 
@@ -469,6 +472,80 @@
 
     <!-- template js -->
     <script src="assets/js/ogenix.js"></script>
+
+    <!-- Uključite EmailJS SDK (ovde preko CDN-a) -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("OVLrFSYr2Tg32GyJa");  // Zamenite YOUR_USER_ID stvarnom vrednošću iz EmailJS naloga
+        })();
+    </script>
+
+    <script>
+        // Funkcija za učitavanje proizvoda iz localStorage
+        function loadCart() {
+            var cart = localStorage.getItem("NaturalFoodProizvodi");
+            return cart ? JSON.parse(cart) : [];
+        }
+
+        // Funkcija za ažuriranje tabele narudžbine i skrivenog polja sa opisom porudžbine
+        function updateOrderTable() {
+            var cart = loadCart();
+            var $tbody = $("#orderTableBody");
+            $tbody.empty();
+            var subtotal = 0;
+            var orderText = "";
+
+            cart.forEach(function (item, index) {
+                var itemPrice = parseFloat(item.price);
+                var quantity = parseInt(item.quantity);
+                var totalItem = itemPrice * quantity;
+                subtotal += totalItem;
+
+                // Generišemo red tabele
+                var row = '<tr>' +
+                    '<td>' + item.name + '</td>' +
+                    '<td class="right">$' + itemPrice.toFixed(2) + '</td>' +
+                    '<td class="right">' + quantity + '</td>' +
+                    '<td class="right">$' + totalItem.toFixed(2) + '</td>' +
+                    '</tr>';
+                $tbody.append(row);
+
+                // Dodajemo red u tekstualni opis
+                orderText += item.name + " - " + quantity + " x $" + itemPrice.toFixed(2) + " = $" + totalItem.toFixed(2) + "\n";
+            });
+
+            $("#cartSubtotal").text('$' + subtotal.toFixed(2) + ' USD');
+            $("#cartTotal").text('$' + subtotal.toFixed(2) + ' USD');
+            $("#orderSummary").val(orderText);
+        }
+
+        $(document).ready(function () {
+            // Učitavanje tabele prilikom učitavanja stranice
+            updateOrderTable();
+
+            // Prilikom slanja forme, koristimo EmailJS za slanje porudžbine
+            $("#checkoutForm").on("submit", function (event) {
+                event.preventDefault(); // sprečava podrazumevano slanje forme
+
+                if (this.checkValidity()) { // provera validnosti forme
+                    emailjs.sendForm('service_gz7rmv8', 'template_96uzdmv', this)
+                        .then(function () {
+                            alert("Porudžbina je uspešno poslata!");
+                            $("#checkoutForm")[0].reset();
+                            localStorage.removeItem("NaturalFoodProizvodi");
+                            updateOrderTable();
+                        }, function (error) {
+                            alert("Slanje porudžbine nije uspelo. Pokušajte ponovo.");
+                            console.log("EmailJS error:", error);
+                        });
+                } else {
+                    alert("Molimo popunite sva obavezna polja.");
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
